@@ -23,10 +23,6 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-@app.route('/graph/')
-def about():
-    return render_template("Graph.html")
-
-
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port='5000', debug=True)
+    app.run(debug=False)
+    # app.run(host='0.0.0.0', port='5000', debug=True)

@@ -1,5 +1,4 @@
 import cv2
-from datetime import datetime
 face_cascade = cv2.CascadeClassifier("cascade_frontalface.xml")
 
 
@@ -23,8 +22,6 @@ class VideoCamera(object):
         for x, y, w, h in faces:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 3)
             break
-
-        #gray = cv2.GaussianBlur(gray, (21, 21), 0)
 
         # Convert to jpg
         check, jpeg = cv2.imencode('.jpg', frame)
